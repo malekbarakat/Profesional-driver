@@ -27,11 +27,11 @@ include("signup_action.php");
               <div class="input_field">
                 <!-- <span><i aria-hidden="true" class="fa fa-envelope"></i></span> -->
                 <input type="email" name="email"value="<?php echo $email;?>" placeholder="Email" required />
-                <span class="error"><?php echo $emailErr;?></span>
+                <span class="error"><i aria-hidden="true" class="fa fa-envelope"></i><?php echo $emailErr;?></span>
               </div>
               <div class="input_field">
                 <!-- <span><i aria-hidden="true" class="fa fa-lock"></i></span> -->
-                <span class="error"><?php echo $passwordErr;?></span>
+                <span class="error"><i aria-hidden="true" class="fa fa-lock"></i><?php echo $passwordErr;?></span>
 
                 <input
                   type="password"
@@ -57,11 +57,11 @@ include("signup_action.php");
                 <div class="col_half">
                   <div class="input_field">
                     <!-- <span><i aria-hidden="true" class="fa fa-user"></i></span> -->
-                    <span class="error"><?php echo $firstNameErr;?></span>
+                    <span class="error"><i aria-hidden="true" class="fa fa-user"></i><?php echo $firstNameErr;?></span>
 
                     <input
                       type="text"
-                      name="name"
+                      name="firstname"
                       placeholder="First Name"
                       value="<?php echo $firstName;?>"
                       required
@@ -71,11 +71,11 @@ include("signup_action.php");
                 <div class="col_half">
                   <div class="input_field">
                     <!-- <span><i aria-hidden="true" class="fa fa-user"></i></span> -->
-                    <span class="error"><?php echo $lastNameErr;?></span>
+                    <span class="error"><i aria-hidden="true" class="fa fa-user"></i><?php echo $lastNameErr;?></span>
 
                     <input
                       type="text"
-                      name="name"
+                      name="lastname"
                       placeholder="Last Name"
                       value="<?php echo $lastName;?>"
                       required

@@ -58,10 +58,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   // Validate first name
-  if (empty($_POST["firstName"])) {
+  if (empty($_POST["firstname"])) {
     $firstNameErr = "First name is required";
   } else {
-    $firstName = test_input($_POST["firstName"]);
+    $firstName = test_input($_POST["firstname"]);
     // First name can only contain letters and spaces
     if (!preg_match("/^[a-zA-Z ]*$/",$firstName)) {
       $firstNameErr = "Only letters and spaces allowed";
@@ -69,10 +69,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   // Validate last name
-  if (empty($_POST["lastName"])) {
+  if (empty($_POST["lastname"])) {
     $lastNameErr = "Last name is required";
   } else {
-    $lastName = test_input($_POST["lastName"]);
+    $lastName = test_input($_POST["lastname"]);
     // Last name can only contain letters and spaces
     if (!preg_match("/^[a-zA-Z ]*$/",$lastName)) {
       $lastNameErr = "Only letters and spaces allowed";

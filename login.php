@@ -1,3 +1,6 @@
+
+<?php include("login_action.php");?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,24 +43,27 @@
             <div class="row justify-content-center">
               <div class="col-md-8">
                 <div class="mb-4">
-                  <h3 class="si">Sign In</h3>
+                  <h3 class="si">Log In</h3>
                   <p class="mb-4">
-                    Type your username and password or create new account
+                    Type your email and password or create new account
                   </p>
                 </div>
-                <form action="login.php" method="post">
+                <form action="login.php" method="POST">
                   <div class="form-group first">
                     <input
                       type="text"
+                      name="email"
                       class="form-control"
-                      id="username"
-                      placeholder="Username"
+                      id="email"
+                      placeholder="email"
                       required
                     />
                   </div>
                   <div class="form-group last mb-4">
                     <input
                       type="password"
+                      name="password"
+
                       class="form-control"
                       id="password"
                       placeholder="Password"
@@ -86,7 +92,7 @@
 
                   <span class="d-block text-left my-4 text-muted"
                     >or login with
-                    <a href="indexP.html" class="sign_up">Create account</a>
+                    <a href="signup.php" class="sign_up">Create account</a>
                   </span>
 
                   <div class="social-login">
@@ -109,3 +115,4 @@
     </div>
   </body>
 </html>
+<?php include("login_action.php");?>
