@@ -1,2 +1,2 @@
 <?php
-echo"welcome in home page ";
+echo"welcome in home page ";?>

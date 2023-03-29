@@ -19,7 +19,6 @@ include("signup_action.php");
     <div class="form_wrapper">
       <div class="form_container">
         <div class="title_container">
-          <h1>hello</h1>
           <h2>Create New Account</h2>
 
         </div>

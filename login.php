@@ -29,7 +29,6 @@
     <title>Sign In</title>
   </head>
   <body>
-    <h1>higfdhf</h1>
     <div class="content">
       <div class="container">
         <div class="row">
