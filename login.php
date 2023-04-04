@@ -83,6 +83,7 @@
                       ><a href="#" class="forgot-pass">Forgot Password</a></span
                     >
                   </div>
+                  <span ><?php echo $logerr;?></span>
 
                   <input
                     type="submit"
@@ -115,4 +116,3 @@
     </div>
   </body>
 </html>
-<?php include("login_action.php");?>

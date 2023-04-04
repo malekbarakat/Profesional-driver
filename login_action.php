@@ -17,7 +17,7 @@
 	} catch (\PDOException $e) {
 	     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 	}
-
+		$logerr="";
 	// Check if form submitted
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		// Retrieve form data
@@ -30,7 +30,7 @@
 		$user = $stmt->fetch();
 
 		if (!$user) {
-			echo '<p>Invalid email or password.</p>';
+			$logerr ="Invalid email or password";
 		} else {
 			// Check if password is correct
 			if (password_verify($password, $user['password'])) {
@@ -41,7 +41,7 @@
 				header('Location: home.php');
 				exit();
 			} else {
-				echo '<p>Invalid email or password.</p>';
+				$logerr ="Invalid email or password";
 			}
 		}
 	}
