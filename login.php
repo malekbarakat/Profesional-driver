@@ -27,6 +27,13 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Sign In</title>
+
+    <script>
+    function showError(message) {
+      alert(message);
+    }
+    </script>
+
   </head>
   <body>
     <div class="content">
@@ -83,7 +90,13 @@
                       ><a href="#" class="forgot-pass">Forgot Password</a></span
                     >
                   </div>
-                  <span ><?php echo $logerr;?></span>
+                  <span >
+                  <?php 
+                  if (!empty($logerr)) {
+                  echo '<script>showError("' . $logerr . '");</script>';
+                  }
+                  ?>
+                  </span>
 
                   <input
                     type="submit"
