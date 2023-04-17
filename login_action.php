@@ -38,7 +38,7 @@
 				// Set session variable for logged in user
 				session_start();
 				$_SESSION['email'] = $email;
-				header('Location: index.html');
+				header('Location: home.php');
 				exit();
 			} else {
 				$logerr ="Invalid email or password";

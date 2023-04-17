@@ -1,10 +1,12 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>ProfessionalDriver</title>
+    <title>ProfessionalDrivers</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
@@ -48,7 +50,7 @@
               ><span
                 ><strong
                   ><span style="color: #eb5d1e">Professional</span
-                  >Driver</strong
+                  >Drivers</strong
                 ></span
               ></a
             >
@@ -81,9 +83,7 @@
             </li>
             <li><a class="nav-link scrollto" href="#contact">تواصل معنا</a></li>
             <li>
-              <a class="getstarted scrollto" href="index - Sign In.html"
-                >تسجيل الخروج</a
-              >
+              <a class="getstarted scrollto" href="login.php">تسجيل الدخول</a>
             </li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
@@ -102,7 +102,11 @@
           >
             <h1>مرحبًا بكم في موقع تدريب القيادة</h1>
             <h2>حيث نهدف إلى تعليم القيادة بطريقة آمنة ومسؤولة</h2>
-            <div><h2>مرحبا</h2></div>
+            <div>
+              <a href="login.php" class="btn-get-started scrollto"
+                >تسجيل الدخول</a
+              >
+            </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img">
             <img
@@ -179,7 +183,7 @@
             >
               <div class="icon-box">
                 <div class="icon"><i class="bx bxs-videos"></i></div>
-                <h4 class="title"><a href="">المادة العملية</a></h4>
+                <h4 class="title"><a href="login.php">المادة العملية</a></h4>
                 <p class="description">
                   يحتوي هذا القسم على المهارات المتعلقة بالقيادة، مثل الانعطافات
                   وتفادي الأخطاء الشائعة
@@ -194,7 +198,7 @@
             >
               <div class="icon-box">
                 <div class="icon"><i class="bx bxs-traffic"></i></div>
-                <h4 class="title"><a href="">المادة النظرية</a></h4>
+                <h4 class="title"><a href="login.php">المادة النظرية</a></h4>
                 <p class="description">
                   يحتوي هذا القسم على قواعد ولوائح السير والمرور والتشريعات
                   المرورية المختلفة
@@ -209,7 +213,7 @@
             >
               <div class="icon-box">
                 <div class="icon"><i class="bx bx-user-check"></i></div>
-                <h4 class="title"><a href="">الامتحان النظري</a></h4>
+                <h4 class="title"><a href="login.php">الامتحان النظري</a></h4>
                 <p class="description">
                   يحتوي هذا القسم على امتحان شامل ومحاكي لامتحانات دائرة السير
                 </p>
@@ -223,7 +227,9 @@
             >
               <div class="icon-box">
                 <div class="icon"><i class="bx bx-id-card"></i></div>
-                <h4 class="title"><a href="">ارشادات إصدار الرخصة</a></h4>
+                <h4 class="title">
+                  <a href="login.php">ارشادات إصدار الرخصة</a>
+                </h4>
                 <p class="description">
                   يحتوي هذا القسم على الارشادات الواجب اتباعها لإصدار رخصة
                   القيادة
