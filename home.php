@@ -86,6 +86,10 @@
               <ul>
                 <li><a href="#">مراكز التدريب</a></li>
                 <li><a href="#">حجز المواعيد</a></li>
+                <li><a href="#">المادة العملية</a></li>
+                <li><a href="#">المادة النظرية</a></li>
+                <li><a href="#">الامتحان النظري</a></li>
+                <li><a href="#">ارشادات اصدار الرخصة</a></li>
               </ul>
             </li>
             <li><a class="nav-link scrollto" href="#contact">تواصل معنا</a></li>
@@ -577,13 +581,7 @@
                   >
                 </textarea>
                 </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">
-                    Your message has been sent. Thank you!
-                  </div>
-                </div>
+                
                 <div class="text-center">
                   <button type="submit">Send Message</button>
                 </div>
