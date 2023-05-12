@@ -89,7 +89,7 @@
                 <li><a href="#">المادة العملية</a></li>
                 <li><a href="#">المادة النظرية</a></li>
                 <li><a href="#">الامتحان النظري</a></li>
-                <li><a href="#">ارشادات اصدار الرخصة</a></li>
+                <li><a href="page_1.html">ارشادات اصدار الرخصة</a></li>
               </ul>
             </li>
             <li><a class="nav-link scrollto" href="#contact">تواصل معنا</a></li>
