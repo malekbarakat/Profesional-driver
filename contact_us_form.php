@@ -65,15 +65,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         foreach ($errors as $error) {
             echo $error . '<br>';
         }
-        // Display errors as JavaScript alerts
-        // if (!empty($errors)) {
-        //     echo '<script>';
-        //     echo 'var errorDiv = document.getElementById("error-message");';
-        //     foreach ($errors as $error) {
-        //         echo 'errorDiv.innerHTML += "'.$error.'<br>";';
-        //     }
-        //     echo '</script>';
-        // }
+//        Display errors as JavaScript alerts
+        if (!empty($errors)) {
+            echo '<script>';
+            echo 'var errorDiv = document.getElementById("error-message");';
+            foreach ($errors as $error) {
+                echo 'errorDiv.innerHTML += "'.$error.'<br>";';
+            }
+            echo '</script>';
+        }
     }
 }
 ?>
