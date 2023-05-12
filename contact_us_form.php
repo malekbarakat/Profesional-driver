@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = "INSERT INTO messages (name, email, subject, message) VALUES ('$name', '$email', '$subject', '$message')";
         if (mysqli_query($conn, $sql)) {
             // Redirect to the same page
-            header('Location: wolcome.php');
+            header('Location: home.php');
             exit;
         } else {
             echo 'Error: ' . $sql . '<br>' . mysqli_error($conn);
@@ -66,16 +66,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo $error . '<br>';
         }
         // Display errors as JavaScript alerts
-        if (!empty($errors)) {
-            echo '<script>';
-            echo 'var errorDiv = document.getElementById("error-message");';
-            foreach ($errors as $error) {
-                echo 'errorDiv.innerHTML += "'.$error.'<br>";';
-            }
-            echo '</script>';
-        }
+        // if (!empty($errors)) {
+        //     echo '<script>';
+        //     echo 'var errorDiv = document.getElementById("error-message");';
+        //     foreach ($errors as $error) {
+        //         echo 'errorDiv.innerHTML += "'.$error.'<br>";';
+        //     }
+        //     echo '</script>';
+        // }
     }
 }
 ?>
 
-<!-- HTML form -->

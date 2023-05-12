@@ -534,7 +534,6 @@
                 action="contact_us_form.php"
                 method="post"
                 role="form"
-                class="php-email-form"
               >
                 <div class="row">
                   <div class="form-group col-md-6">
@@ -542,48 +541,57 @@
                     <input
                       type="text"
                       name="name"
-                      class="form-control"
                       id="name"
+                      class="form-control"
                       placeholder="Your Name"
+                      value="<?php echo htmlspecialchars($name); ?>"
                       required
                     />
                   </div>
                   <div class="form-group col-md-6 mt-3 mt-md-0">
-                    <label for="name">Your Email</label>
+                    <label for="email">Your Email</label>
                     <input
                       type="email"
-                      class="form-control"
                       name="email"
                       id="email"
+                      class="form-control"
+
                       placeholder="Your Email"
+                      value="<?php echo htmlspecialchars($email); ?>"
                       required
                     />
                   </div>
                 </div>
                 <div class="form-group mt-3">
-                  <label for="name">Subject</label>
+                  <label for="subject">Subject</label>
                   <input
                     type="text"
-                    class="form-control"
                     name="subject"
                     id="subject"
+                    class="form-control"
+
                     placeholder="Subject"
+                    value="<?php echo htmlspecialchars($subject); ?>"
                     required
+
                   />
                 </div>
                 <div class="form-group mt-3">
-                  <label for="name">Message</label>
+                  <label for="message">Message</label>
                   <textarea
-                    class="form-control"
                     name="message"
                     rows="10"
+                    class="form-control"
+
+                    id="message"
                     required
                   >
-                </textarea>
+                  <?php echo htmlspecialchars($message);?>
+                 </textarea>
                 </div>
                 
                 <div class="text-center">
-                  <button type="submit">Send Message</button>
+                  <button type="submit" value="Send">Send Message</button>
                 </div>
               </form>
             </div>
