@@ -1,12 +1,14 @@
 <?php 
-	session_start(); // Start the session
+	// session_start(); // Start the session
 
-	if(!isset($_SESSION['email'])) {
-		header('Location: login.php');
-		exit();
-	}
+	// if(!isset($_SESSION['email'])) {
+	// 	header('Location: login.php');
+	// 	exit();
+	// }
 ?>
-<?php include("contact_us_form.php");?>
+<?php 
+// include("contact_us_form.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -84,7 +86,6 @@
                 ><span>اقسام اخرى</span> <i class="bi bi-chevron-down"></i
               ></a>
               <ul>
-                <li><a href="#">مراكز التدريب</a></li>
                 <li><a href="#">حجز المواعيد</a></li>
                 <li><a href="#">المادة العملية</a></li>
                 <li><a href="#">المادة النظرية</a></li>
