@@ -223,7 +223,7 @@ include("contact_us_form.php");
             >
               <div class="icon-box">
                 <div class="icon"><i class="bx bx-user-check"></i></div>
-                <h4 class="title"><a href="">الامتحان النظري</a></h4>
+                <h4 class="title"><a href="ExamHP.html">الامتحان النظري</a></h4>
                 <p class="description">
                   يحتوي هذا القسم على امتحان شامل ومحاكي لامتحانات دائرة السير
                 </p>
