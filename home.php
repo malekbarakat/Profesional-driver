@@ -1,13 +1,13 @@
 <?php 
-	// session_start(); // Start the session
+	session_start(); // Start the session
 
-	// if(!isset($_SESSION['email'])) {
-	// 	header('Location: login.php');
-	// 	exit();
-	// }
+	if(!isset($_SESSION['email'])) {
+		header('Location: login.php');
+		exit();
+	}
 ?>
 <?php 
-// include("contact_us_form.php");
+include("contact_us_form.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

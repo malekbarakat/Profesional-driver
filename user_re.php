@@ -4,7 +4,7 @@ session_start();
 
 // Connect to database
 $host = 'localhost';
-$dbname = 'test3';
+$dbname = 'final';
 $username = 'root';
 $password = '';
 $charset = 'utf8mb4';
