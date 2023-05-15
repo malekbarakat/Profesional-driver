@@ -94,5 +94,58 @@ if ($emailErr == "" && $passwordErr == "" && $firstNameErr == "" && $lastNameErr
 exit();
 }
 }
-
+// If form is submitted for update
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update"])) {
+  // Validate input
+  $id = test_input($_POST["id"]);
+  
+  if (empty($_POST["email"])) {
+  $emailErr = "Email is required";
+  } else {
+  $email = test_input($_POST["email"]);
+  if (!is_valid_email($email)) {
+  $emailErr = "Invalid email format";
+  }
+  }
+  
+  if (empty($_POST["password"])) {
+  $passwordErr = "Password is required";
+  } else {
+  $password = test_input($_POST["password"]);
+  if (!is_valid_password($password)) {
+  $passwordErr = "Password must be at least 8 characters long and contain at least one letter and one number";
+  }
+  }
+  
+  if (empty($_POST["firstName"])) {
+  $firstNameErr = "First name is required";
+  } else {
+  $firstName = test_input($_POST["firstName"]);
+  if (!preg_match("/^[a-zA-Z ]*$/",$firstName)) {
+  $firstNameErr = "Only letters and spaces allowed";
+  }
+  }
+  
+  if (empty($_POST["lastName"])) {
+  $lastNameErr = "Last name is required";
+  } else {
+  $lastName = test_input($_POST["lastName"]);
+  if (!preg_match("/^[a-zA-Z ]*$/",$lastName)) {
+  $lastNameErr = "Only letters and spaces allowed";
+  }
+  }
+  
+  // If there are no errors, update data in database
+  if ($emailErr == "" && $passwordErr == "" && $firstNameErr == "" && $lastNameErr == "" ) {
+  $stmt = $con->prepare("UPDATE useres SET email = :email, password = :password, firstname = :firstname, lastname = :lastname WHERE id = :id");
+  $stmt->bindParam(":email", $email);
+  $stmt->bindParam(":password", password_hash($password, PASSWORD_DEFAULT)); // Hash password before storing in database
+  $stmt->bindParam(":firstname", $firstName);
+  $stmt->bindParam(":lastname", $lastName);
+  $stmt->bindParam(":id", $id);
+  $stmt->execute();
+  header("Location: ../home.php");
+exit();
+}
+}
 ?>

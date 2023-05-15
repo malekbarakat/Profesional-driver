@@ -121,6 +121,8 @@
                     </a>
                   </div>
                 </form>
+                    <a href="admin/admin_index.php"class="sign_up">Admin</a><br>
+
               </div>
             </div>
           </div>
