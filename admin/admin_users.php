@@ -89,7 +89,10 @@
           $stmt->bindParam(":lastName", $lastName);
           $stmt->bindParam(":id", $id);
           $stmt->execute();
-          header("Location: admin_users.php");
+          echo "<script>
+          alert('Record updated successfully');
+          window.location.href = 'admin_home.php';
+      </script>";
       } catch(PDOException $e) {
           echo "Error: " . $e->getMessage();
       }
