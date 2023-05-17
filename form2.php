@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Request Form</title>
     <style>
@@ -14,7 +15,7 @@
             max-width: 400px;
             margin: 0 auto;
             padding: 20px;
-            background-color: rgba(255, 165, 0, 0.9); /* Updated darker background color */
+            background-color: #eb5d1e; /* Updated darker background color */
             border: 1px solid #fff;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -54,7 +55,7 @@
 
         form input[type="submit"] {
             background-color: #fff;
-            color: #FFA500;
+            color: #eb5d1e;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
@@ -67,47 +68,51 @@
             margin-bottom: 10px;
             padding: 10px;
             background-color: #fff;
-            color: #FFA500;
+            color: #eb5d1e;
             border-radius: 4px;
             font-weight: bold;
+        }
+        .textright{
+            text-align: right;
+
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Driver's License Request</h1>
-        <form method="POST" enctype="multipart/form-data" action="form2.php">
-            <label>Name:</label>
+        <h1>حجز موعد الرخصة</h1>
+        <form class="textright"method="POST" enctype="multipart/form-data" action="form2.php">
+            <label>الاسم</label>
             <input type="text" name="name" required>
 
-            <label>Age:</label>
+            <label>العمر</label>
             <input type="number" name="age" required max="100">
 
-            <label>ID Number:</label>
+            <label>الرقم الوطني</label>
             <input type="number" name="id_number" required>
 
-            <label>Email:</label>
+            <label>البريد</label>
             <input type="email" name="email" required>
 
-            <label>Phone:</label>
+            <label>رقم الهاتف </label>
             <input type="tel" name="phone" required>
 
-            <label>Description:</label>
+            <label>ملاحظات:</label>
             <textarea name="description"></textarea>
 
-            <label>Case Status:</label>
+            <label>حالة الطلب</label>
             <input type="text" name="case_status" value="Pending" disabled>
 
-            <label>Upload Driver's License Front:</label>
+            <label>الوجه الامامي للهوية</label>
             <input type="file" name="image1">
 
-            <label>Upload Driver's License Back:</label>
+            <br><label>الوجه الخلفي للهوية</label>
             <input type="file" name="image2">
 
-            <label>Upload Proof of Address:</label>
+            <label>  الصورة الشخصية</label>
             <input type="file" name="image3">
 
-            <input type="submit" value="Submit Request">
+            <input type="submit" value="ارسال الطلب">
         </form>
 
         <?php
@@ -171,10 +176,10 @@
                             VALUES ('$name', '$age', '$id_number', '$description', '$case_status', '$escaped_file1', '$escaped_file2', '$escaped_file3', '$email', '$phone')";
                     if ($conn->query($sql) === TRUE) {
                         // Request submitted successfully
-                        $message = "Your application was submitted successfully!";
+                        $message = "تم تقديم طلبك بنجاح";
                     } else {
                         // Error inserting request into database
-                        $message = "There was an error submitting your application.";
+                        $message = "هنالك خطأ في البيانات";
                     }
                 } else {
                     // File types are not images
@@ -183,7 +188,7 @@
             } else {
                 // Not all files were uploaded
                 // Show error message to the user
-                $message = "Please upload all three image files.";
+                $message = "قم بتحميل جميع الصور";
             }
             // Display message to the user
             echo "<p class='message'>$message</p>";

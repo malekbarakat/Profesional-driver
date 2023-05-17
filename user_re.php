@@ -70,11 +70,11 @@ $requests = $stmt->fetchAll();
         <table>
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>ID Number</th>
-                    <th>Description</th>
-                    <th>Status</th>
+                    <th>الاسم</th>
+                    <th>العمر</th>
+                    <th> الرقم الوطني</th>
+                    <th>ملاحظات</th>
+                    <th>حالة الطلب </th>
                 </tr>
             </thead>
             <tbody>
