@@ -345,9 +345,11 @@ h6,
 }
 
 .photo {
-  width: 80%;
-  margin-left: 40px;
+  width: 70%;
+  margin-left: 75px;
   background-color: #fef8f5;
+  margin-top: -10px;
+  margin-bottom: -10px;
 }
 
 .foot,

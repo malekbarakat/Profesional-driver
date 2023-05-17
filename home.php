@@ -89,7 +89,7 @@ include("contact_us_form.php");
                 <li><a href="#">حجز المواعيد</a></li>
                 <li><a href="#">المادة العملية</a></li>
                 <li><a href="#">المادة النظرية</a></li>
-                <li><a href="#">الامتحان النظري</a></li>
+                <li><a href="ExamHP.html">الامتحان النظري</a></li>
                 <li><a href="page_1.html">ارشادات اصدار الرخصة</a></li>
               </ul>
             </li>
