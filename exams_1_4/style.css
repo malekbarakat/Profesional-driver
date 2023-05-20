@@ -414,3 +414,8 @@ footer button.show {
   right: 15px;
   bottom: 17px;
 }
+
+.img_que {
+  width: 50%;
+  height: 30%;
+}
