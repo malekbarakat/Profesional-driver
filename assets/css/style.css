@@ -1070,3 +1070,8 @@ footer {
     padding: 3px 0;
   }
 }
+
+.meow {
+  background-color: black;
+  color: white;
+}

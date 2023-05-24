@@ -88,7 +88,7 @@ include("contact_us_form.php");
               <ul>
                 <li><a href="form2.php">حجز المواعيد</a></li>
                 <li><a href="user_re.php"> طلباتي</a></li>
-                <li><a href="#">المادة النظرية</a></li>
+                <li><a href="المادة النظرية.html">المادة النظرية</a></li>
                 <li><a href="ExamHP.html">الامتحان النظري</a></li>
                 <li><a href="page_1.html">ارشادات اصدار الرخصة</a></li>
               </ul>
@@ -592,7 +592,7 @@ include("contact_us_form.php");
                 </div>
                 
                 <div class="text-center">
-                  <button type="submit" value="Send">Send Message</button>
+                  <button class="meow" type="submit" value="Send">Send Message</button>
                 </div>
               </form>
             </div>
