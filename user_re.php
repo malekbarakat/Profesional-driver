@@ -46,10 +46,10 @@ $requests = $stmt->fetchAll();
         table {
             border-collapse: collapse;
             width: 100%;
+            text-align: right;
         }
 
         th, td {
-            text-align: left;
             padding: 8px;
         }
 
@@ -61,30 +61,29 @@ $requests = $stmt->fetchAll();
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+        h1 {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <h1>Requests</h1>
+    <h1>طلباتي</h1>
 
     <?php if (count($requests) > 0): ?>
         <table>
             <thead>
                 <tr>
-                    <th>الاسم</th>
-                    <th>العمر</th>
-                    <th> الرقم الوطني</th>
-                    <th>ملاحظات</th>
-                    <th>حالة الطلب </th>
+                    <th>حالة الطلب</th>
+                    <th>الملاحظات</th>
+                    <th> العمر</th>
+                    <th>الرقم الوطني</th>
+                    <th>الاسم </th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($requests as $request): ?>
                     <tr>
-                        <td><?= $request['name'] ?></td>
-                        <td><?= $request['age'] ?></td>
-                        <td><?= $request['id_number'] ?></td>
-                        <td><?= $request['description'] ?></td>
-                        <td style="
+                    <td style="
                             <?php
                                 if ($request['case_status'] === 'Pending') {
                                     echo 'color: silver;';
@@ -97,6 +96,13 @@ $requests = $stmt->fetchAll();
                         ">
                             <?= $request['case_status'] ?>
                         </td>
+                        <td><?= $request['description'] ?></td>
+                        <td><?= $request['age'] ?></td>
+
+                        <td><?= $request['id_number'] ?></td>
+                        <td><?= $request['name'] ?></td>
+
+                        
                     </tr>
                 <?php endforeach; ?>
             </tbody>

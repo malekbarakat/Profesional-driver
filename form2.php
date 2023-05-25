@@ -2,6 +2,10 @@
 <html>
 
 <head>
+<link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Request Form</title>
     <style>
         body {
@@ -15,7 +19,7 @@
             max-width: 400px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #eb5d1e; /* Updated darker background color */
+            background-color: #eb5d1e;
             border: 1px solid #fff;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -43,6 +47,7 @@
             border: 1px solid #fff;
             border-radius: 4px;
             box-sizing: border-box;
+            margin-top: 6px;
         }
 
         form textarea {
@@ -50,7 +55,10 @@
         }
 
         form input[type="file"] {
-            margin-top: 5px;
+            margin-top: 6px;
+            position: relative;
+            right: 130px;
+            bottom: 25px;
         }
 
         form input[type="submit"] {
@@ -61,6 +69,15 @@
             cursor: pointer;
             font-size: 16px;
             font-weight: bold;
+            margin-top: 5px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #FF9933;
+            color: #fff;
+            transition: 0.3s;
         }
 
         .message {
@@ -76,9 +93,47 @@
             text-align: right;
 
         }
+        input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        }
+        .bg {
+            background-color: #D3D3D3;
+        }
+        .p1, .p2, .p3 {
+            margin-top: 5px;
+            margin-bottom: 20px;
+            padding-top: 8px;
+            padding-right: 6px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            height: 30px;
+        }
+        .circle {
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  background-color: #eb5d1e;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+.circle i {
+  font-size: 40px;
+  position: absolute;
+  right: 15px;
+  bottom: 17px;
+}
+       
     </style>
 </head>
 <body>
+<div class="circle">
+      <a href="home.php" style="color: #fff">
+        <i class="bx bxs-home"></i>
+      </a>
+    </div>
+
     <div class="container">
         <h1>حجز موعد الرخصة</h1>
         <form class="textright"method="POST" enctype="multipart/form-data" action="form2.php">
@@ -101,16 +156,20 @@
             <textarea name="description"></textarea>
 
             <label>حالة الطلب</label>
-            <input type="text" name="case_status" value="Pending" disabled>
+            <input class="bg" type="text" name="case_status" value="Pending" disabled>
 
-            <label>الوجه الامامي للهوية</label>
-            <input type="file" name="image1">
-
-            <br><label>الوجه الخلفي للهوية</label>
-            <input type="file" name="image2">
-
-            <label>  الصورة الشخصية</label>
-            <input type="file" name="image3">
+            <div class="p1">
+            <label>الوجه الامامي للهوية</label><br>
+            <input type="file" name="image1"><br>
+            </div>
+            <div class="p2">
+            <label >الوجه الخلفي للهوية</label><br>
+            <input type="file" name="image2"><br>
+            </div>
+            <div class="p3">
+            <label >  الصورة الشخصية</label><br>
+            <input type="file" name="image3"><br>
+            </div>
 
             <input type="submit" value="ارسال الطلب">
         </form>
