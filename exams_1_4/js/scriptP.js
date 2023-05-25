@@ -97,6 +97,8 @@ function showQuetions(index) {
   const que_text = document.querySelector(".que_text");
 
   img.src = questions[index].img;
+  img.width = 300;
+  img.height = 250;
 
   //creating a new span and div tag for question and option and passing the value using array index
   let que_tag = "<span>" + questions[index].question;
