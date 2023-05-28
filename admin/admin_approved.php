@@ -1,4 +1,3 @@
-<?php
 <?php    	
 session_start(); // Start the session
 
@@ -7,6 +6,8 @@ if(!isset($_SESSION['email'])) {
     exit();
 }
  ?>
+<?php
+
 $servername = "localhost";
 $username = "root";
 $password = "";
