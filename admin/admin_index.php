@@ -37,7 +37,9 @@ if(isset($_POST['submit'])) {
         
         if($admin && password_verify($password, $admin['password']) && $admin['code'] === $code) {
             // User input is valid, redirect the user to the admin.php page
-            header("Location: admin_home.php");
+            session_start();
+				$_SESSION['email'] = $email;
+			header("Location: admin_home.php");
             exit();
         } else {
             // User input is invalid, display an error message

@@ -1,4 +1,12 @@
 <?php
+<?php    	
+session_start(); // Start the session
+
+if(!isset($_SESSION['email'])) {
+    header('Location: admin_index.php');
+    exit();
+}
+ ?>
 $servername = "localhost";
 $username = "root";
 $password = "";

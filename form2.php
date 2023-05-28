@@ -1,3 +1,11 @@
+<?php    	
+session_start(); // Start the session
+
+if(!isset($_SESSION['email'])) {
+    header('Location: login.php');
+    exit();
+}
+ ?>
 <!DOCTYPE html>
 <html>
 
@@ -155,8 +163,16 @@
             <label>ملاحظات:</label>
             <textarea name="description"></textarea>
 
+            <br> <label>نوع الامتحان:</label><br>
+             <select class="p1" name="exam_type" required>
+             <option value="">اختر نوع الامتحان</option>
+            <option value="الامتحان العملي">الامتحان العملي</option>
+          <option value="امتحان نظري">امتحان نظري</option>
+            </select><br>
+
             <label>حالة الطلب</label>
             <input class="bg" type="text" name="case_status" value="Pending" disabled>
+
 
             <div class="p1">
             <label>الوجه الامامي للهوية</label><br>
@@ -196,6 +212,8 @@
             $email = $_POST['email'];
             $phone = $_POST['phone'];
             $case_status = 'Pending'; // Default case status
+            $exam_type = $_POST['exam_type']; // Get the selected exam type
+
 
             // Check if the file was uploaded successfully
             if (isset($_FILES['image1']) && $_FILES['image1']['error'] == UPLOAD_ERR_OK &&
@@ -231,8 +249,8 @@
                     $escaped_file3 = $conn->real_escape_string($file3_contents);
 
                     // Insert the file contents into the database
-                    $sql = "INSERT INTO app (name, age, id_number, description, case_status, image1, image2, image3, email, phone)
-                            VALUES ('$name', '$age', '$id_number', '$description', '$case_status', '$escaped_file1', '$escaped_file2', '$escaped_file3', '$email', '$phone')";
+                    $sql = "INSERT INTO app (name, age, id_number, description, case_status, exam_type, image1, image2, image3, email, phone)
+                            VALUES ('$name', '$age', '$id_number', '$description', '$case_status', '$exam_type', '$escaped_file1', '$escaped_file2', '$escaped_file3', '$email', '$phone')";
                     if ($conn->query($sql) === TRUE) {
                         // Request submitted successfully
                         $message = "تم تقديم طلبك بنجاح";

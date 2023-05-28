@@ -38,6 +38,7 @@
 				// Set session variable for logged in user
 				session_start();
 				$_SESSION['email'] = $email;
+				$_SESSION['id'] = $user['id']; // Store the user's ID in the session
 				header('Location: home.php');
 				exit();
 			} else {

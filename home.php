@@ -5,6 +5,19 @@
 		header('Location: login.php');
 		exit();
 	}
+  include("signup_action.php");
+	include("login_action.php");
+
+	// Get user information from the database
+	try {
+		$userId = $_SESSION["id"];
+		$stmt = $con->prepare("SELECT firstname, lastname FROM useres WHERE id=:id");
+		$stmt->bindParam(":id", $userId);
+		$stmt->execute();
+		$user = $stmt->fetch(PDO::FETCH_ASSOC);
+	} catch(PDOException $e) {
+		echo "Error: " . $e->getMessage();
+	}
 ?>
 <?php 
 include("contact_us_form.php");
@@ -89,8 +102,10 @@ include("contact_us_form.php");
                 <li><a href="form2.php">حجز المواعيد</a></li>
                 <li><a href="user_re.php"> طلباتي</a></li>
                 <li><a href="المادة النظرية.html">المادة النظرية</a></li>
+                <li><a href="videos.html">المادة العملية</a></li>
                 <li><a href="ExamHP.html">الامتحان النظري</a></li>
                 <li><a href="page_1.html">ارشادات اصدار الرخصة</a></li>
+                <li><a href="settings.php">اعدادات</a></li>
               </ul>
             </li>
             <li><a class="nav-link scrollto" href="#contact">تواصل معنا</a></li>
@@ -116,7 +131,7 @@ include("contact_us_form.php");
           >
             <h1>مرحبًا بكم في موقع تدريب القيادة</h1>
             <h2>حيث نهدف إلى تعليم القيادة بطريقة آمنة ومسؤولة</h2>
-            <div><h2>مرحبا  <?php echo $_SESSION['email']; ?></h2></div>
+            <div><h2>  <?php echo" " . $user['firstname'];echo" " . $user['lastname']." "; ?> مرحبا</h2></div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img">
             <img
