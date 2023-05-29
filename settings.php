@@ -118,17 +118,17 @@ try {
     </style>
 </head>
 <body>
-    <h1>User Management</h1>
+    <h1>الاعدادات</h1>
 
     <div class="container">
         <!-- Display records in a table -->
         <table>
             <thead>
                 <tr>
-                    <th>Email</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Action</th>
+                    <th>البريد الالكتروني</th>
+                    <th> الاسم الاول</th>
+                    <th> الاسم الاخير</th>
+                    <th>تحديث</th>
                 </tr>
             </thead>
             <tbody>
@@ -144,14 +144,14 @@ try {
                                 <td><input type="text" name="lastName" value="<?php echo $user["lastname"]; ?>"></td>
                                 <td>
                                     <input type="hidden" name="id" value="<?php echo $user["id"]; ?>">
-                                    <input type="submit" name="update" value="Update" class="btn-update">
+                                    <input type="submit" name="update" value="تحديث" class="btn-update">
                                 </td>
                             </form>
                         </tr>
                         <?php
                     }
                 } else {
-                    echo "<tr><td colspan='5'>No records found.</td></tr>";
+                    echo "<tr><td colspan='5'>لا يوجد سجلات .</td></tr>";
                 }
                 ?>
             </tbody>

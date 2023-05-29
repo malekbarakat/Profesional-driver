@@ -40,7 +40,10 @@ $requests = $stmt->fetchAll();
 <html>
 <head>
     <title>Requests</title>
-
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <!-- Table style -->
     <style>
         table {
@@ -54,7 +57,7 @@ $requests = $stmt->fetchAll();
         }
 
         th {
-            background-color: #4CAF50;
+            background-color: #eb5d1e;
             color: white;
         }
 
@@ -64,9 +67,30 @@ $requests = $stmt->fetchAll();
         h1 {
             text-align: center;
         }
+        .circle {
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  background-color: #eb5d1e;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+.circle i {
+  font-size: 40px;
+  position: absolute;
+  right: 15px;
+  bottom: 17px;
+}
     </style>
 </head>
 <body>
+<div class="circle">
+      <a href="home.php" style="color: #fff">
+        <i class="bx bxs-home"></i>
+      </a>
+    </div>
     <h1>طلباتي</h1>
 
     <?php if (count($requests) > 0): ?>

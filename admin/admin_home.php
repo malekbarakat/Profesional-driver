@@ -49,7 +49,7 @@ if(!isset($_SESSION['email'])) {
 	<h1>اهلا بك في صفحة ادارة النظام</h1>
 	<div class="btn-container">
 		<a class="btn" href="logout.php">تسجيل الخروج</a>
-		<a class="btn" href="admin_users.php">ادارة حسابات المستخدمين</a>
+		<a class="btn" href="admin_users.php"> حسابات المستخدمين</a>
 		<a class="btn" href="admin_contact.php">ادارة استفسارات العملاء </a>
 		<a class="btn" href="admin_app.php">ادارة طلبات  المستخدين</a>
 		<a class="btn" href="admin_approved.php">الطلبات الموافق عليها </a>

@@ -32,8 +32,13 @@ if ($result->num_rows > 0) {
             border-collapse: collapse;
             width: 100%;
           }
+          h1 {
+            color:#2e8b57;
+            font-size: 36px;
+            text-align: center;
+        }
           th, td {
-            text-align: left;
+            text-align: right;
             padding: 8px;
           }
           tr:nth-child(even) {background-color: #f2f2f2;}
@@ -42,11 +47,11 @@ if ($result->num_rows > 0) {
             color: white;
           }
         </style></head><body>";
-  echo "<h2>Approved Requests</h2>";
-  echo "<table><tr><th>ID</th><th>Name</th><th>Age</th><th>ID Number</th><th>Email</th><th>Phone</th><th>Description</th><th>Case State</th></tr>";
+  echo "<h1>الطلبات الموافق عليها </h1>";
+  echo "<table><tr><th>حالة الطلب </th><th>الملاحظات</th><th>رقم الهاتف</th><th>البريد الالكتروني </th><th>الرقم الوطني</th><th>العمر</th><th>الاسم </th><th>ID</th></tr>";
 
   while($row = $result->fetch_assoc()) {
-    echo "<tr><td>" . $row['id'] . "</td><td>" . $row['name'] . "</td><td>" . $row['age'] . "</td><td>" . $row['id_number'] . "</td><td>" . $row['email']. "</td><td>" . $row['phone'] . "</td><td>" . $row['description'] . "</td><td><span style=\"color: green\">" . $row['case_status'] . "</span></td></tr>";
+    echo "<tr><td><span style=\"color: green\">" . $row['case_status'] . "</span></td><td>" . $row['description'] . "</td><td>" . $row['phone'] . "</td><td>" . $row['email'] . "</td><td>" . $row['id_number'] . "</td><td>" . $row['age']. "</td><td>" . $row['name'] . "</td><td>" . $row['id'] . "</td></tr>";
 }
 
   echo "</table></body></html>";

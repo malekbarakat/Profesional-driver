@@ -88,7 +88,7 @@ $result = $conn->query($sql);
     }
 
     th, td {
-        text-align: left;
+        text-align: right;
         padding: 8px;
     }
 
@@ -116,6 +116,8 @@ $result = $conn->query($sql);
         border-radius: 4px;
         box-sizing: border-box;
         background-color: #f2f2f2; /* Set background color for unchangeable fields */
+        text-align: right;
+
     }
 
     input[type='submit'] {
@@ -139,71 +141,89 @@ $result = $conn->query($sql);
     a:hover {
         color: #0056b3;
     }
+    .AGE {
+        width: 60px;
+    }
+    .PHONE, .IDN {
+        width: 120px;
+    }
+    .CT {
+        font-size: 13px;
+    }
+    .DES {
+        width: 250px;
+        height: 90px;
+    }
 </style>
 </head>
 <body>
-    <h1>Records</h1>
+    <h1>طلبات المستخدمين </h1>
     <table>
         <tr>
+            <th>ملفات</th>
+            <th>تعديل </th>
+            <th>حذف</th>
+            <th> التاريخ</th>
+            <th>رقم الهاتف</th>
+            <th>البريد الالكتروني </th>
+            <th> نوع الامتحان </th>
+            <th> حالة الطلب</th>
+            <th>الملاحظات</th>
+            <th>الرقم الوطني</th>
+            <th>العمر</th>
+            <th>الاسم </th>
             <th>ID</th>
-            <th>Name</th>
-            <th>Age</th>
-            <th>ID Number</th>
-            <th>Description</th>
-            <th>Case Status</th>
-            <th>Exam Type</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Creation Time</th>
-            <th>Delete</th>
-            <th>Update</th>
-            <th>View Image</th>
         </tr>
         <?php
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 echo "<tr>";
                 echo "<form method='post' action=''>";
+                echo '<td>
+                <form method="get" action="image.php">
+                    <input type="hidden" name="id" value="' . $row["id"] . '">
+                    <input type="submit" name="view" value="View">
+                </form>
+            </td>';
+        echo '<td>
+        <input type="hidden" name="id" value="' . $row["id"] . '">
+        <input type="submit" name="update" value="Update">
+    </td>';
+    echo '<td>
+    <input type="hidden" name="id" value="' . $row["id"] . '">
+    <input type="submit" name="delete" value="Delete">
+    </td>';
+    echo "<td class='CT'>" . $row["creation_time"] . "</td>";
+    echo "<td class='PHONE'><input type='text' name='phone' value='" . $row["phone"] . "' readonly></td>";
+    echo "<td><input type='text' name='email' value='" . $row["email"] . "' readonly></td>";
+    echo "<td>
+    <select name='exam_type'>
+        <option value='الامتحان العملي' " . ($row['exam_type'] == 'الامتحان العملي' ? 'selected' : '') . ">الامتحان العملي</option>
+        <option value='الامتحان النظري' " . ($row['exam_type'] == 'الامتحان النظري' ? 'selected' : '') . ">الامتحان النظري</option>
+    </select>
+</td>";
+echo "<td>
+    <select name='case_status'>
+        <option value='Pending' " . ($row['case_status'] == 'Pending' ? 'selected' : '') . ">Pending</option>
+        <option value='Rejected' " . ($row['case_status'] == 'Rejected' ? 'selected' : '') . ">Rejected</option>
+        <option value='Approved' " . ($row['case_status'] == 'Approved' ? 'selected' : '') . ">Approved</option>
+    </select>
+</td>";
+
+echo "<td class='DES'><input type='text' name='description' value='" . $row["description"] . "'></td>";
+echo "<td class='IDN'><input type='text' name='id_number' value='" . $row["id_number"] . "' readonly></td>";
+echo "<td class='AGE'><input type='text' name='age' value='" . $row["age"] . "' readonly></td>";
+    echo "<td><input type='text' name='name' value='" . $row["name"] . "' readonly></td>";
                 echo "<td>" . $row["id"] . "</td>";
-                echo "<td><input type='text' name='name' value='" . $row["name"] . "' readonly></td>";
-                echo "<td><input type='text' name='age' value='" . $row["age"] . "' readonly></td>";
-                echo "<td><input type='text' name='id_number' value='" . $row["id_number"] . "' readonly></td>";
-                echo "<td><input type='text' name='description' value='" . $row["description"] . "'></td>";
-                echo "<td>
-                    <select name='case_status'>
-                        <option value='Pending' " . ($row['case_status'] == 'Pending' ? 'selected' : '') . ">Pending</option>
-                        <option value='Rejected' " . ($row['case_status'] == 'Rejected' ? 'selected' : '') . ">Rejected</option>
-                        <option value='Approved' " . ($row['case_status'] == 'Approved' ? 'selected' : '') . ">Approved</option>
-                    </select>
-                </td>";
-                echo "<td>
-                    <select name='exam_type'>
-                        <option value='الامتحان العملي' " . ($row['exam_type'] == 'الامتحان العملي' ? 'selected' : '') . ">الامتحان العملي</option>
-                        <option value='الامتحان النظري' " . ($row['exam_type'] == 'الامتحان النظري' ? 'selected' : '') . ">الامتحان النظري</option>
-                    </select>
-                </td>";
-                echo "<td><input type='text' name='email' value='" . $row["email"] . "' readonly></td>";
-                echo "<td><input type='text' name='phone' value='" . $row["phone"] . "' readonly></td>";
-                echo "<td>" . $row["creation_time"] . "</td>";
-                echo '<td>
-                    <input type="hidden" name="id" value="' . $row["id"] . '">
-                    <input type="submit" name="delete" value="Delete">
-                </td>';
-                echo '<td>
-                    <input type="hidden" name="id" value="' . $row["id"] . '">
-                    <input type="submit" name="update" value="Update">
-                </td>';
+           
+
+             
                 echo '</form>';
-                echo '<td>
-                    <form method="get" action="image.php">
-                        <input type="hidden" name="id" value="' . $row["id"] . '">
-                        <input type="submit" name="view" value="View">
-                    </form>
-                </td>';
+
                 echo "</tr>";
             }
         } else {
-            echo "No results found.";
+            echo "لا يوجد سجلات ";
         }
         ?>
     </table>

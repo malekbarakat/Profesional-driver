@@ -26,8 +26,10 @@ $result = mysqli_query($conn, $sql);
 // Check if data exists
 if (mysqli_num_rows($result) > 0) {
     // Table header
+   echo" <h1>استفسارات المستخدمين </h1>";
+
     echo '<table>';
-    echo '<tr><th>ID</th><th>Name</th><th>Email</th><th>Subject</th><th>Message</th><th>Date</th></tr>';
+    echo '<tr><th>ID</th><th>الاسم</th><th>البريد الالكتروني </th><th>السبب</th><th>الرسالة </th><th>Date</th></tr>';
 
     // Table data
     while ($row = mysqli_fetch_assoc($result)) {
@@ -57,7 +59,11 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
-
+h1 {
+        color:#2e8b57;
+        font-size: 36px;
+        text-align: center;
+    }
 th, td {
     text-align: left;
     padding: 8px;

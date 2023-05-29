@@ -89,26 +89,22 @@ include("contact_us_form.php");
               >
             </li>
             <li><a class="nav-link scrollto" href="#about">نبذة عنّا </a></li>
-            <li><a class="nav-link scrollto" href="#services">الخدمات</a></li>
             <li>
-              <a class="nav-link scrollto" href="#faq">F.A.Q</a>
+              <a class="nav-link scrollto" href="user_re.php">طلباتي</a>
             </li>
-            <li><a class="nav-link scrollto" href="#team">فريق العمل</a></li>
+            <li><a class="nav-link scrollto" href="form2.php">حجز المواعيد</a></li>
             <li class="dropdown">
-              <a href="#"
-                ><span>اقسام اخرى</span> <i class="bi bi-chevron-down"></i
+              <a href="#services"
+                ><span>الخدمات</span> <i class="bi bi-chevron-down"></i
               ></a>
               <ul>
-                <li><a href="form2.php">حجز المواعيد</a></li>
-                <li><a href="user_re.php"> طلباتي</a></li>
                 <li><a href="المادة النظرية.html">المادة النظرية</a></li>
                 <li><a href="videos.html">المادة العملية</a></li>
                 <li><a href="ExamHP.html">الامتحان النظري</a></li>
                 <li><a href="page_1.html">ارشادات اصدار الرخصة</a></li>
-                <li><a href="settings.php">اعدادات</a></li>
               </ul>
             </li>
-            <li><a class="nav-link scrollto" href="#contact">تواصل معنا</a></li>
+            <li><a class="nav-link scrollto" href="settings.php">الاعدادات</a></li>
             <li>
               <a class="getstarted scrollto" href="logout.php"
                 >تسجيل الخروج</a
