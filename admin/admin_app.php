@@ -25,7 +25,10 @@ if (isset($_POST['delete'])) {
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id);
     if ($stmt->execute()) {
-        echo "Record deleted successfully";
+        echo "<script>
+        alert('Record deleted successfully');
+        window.location.href = 'admin_home.php';
+        </script>";
     } else {
         echo "Error deleting record: " . $conn->error;
     }
@@ -151,7 +154,7 @@ $result = $conn->query($sql);
         font-size: 13px;
     }
     .DES {
-        width: 250px;
+        width: 200px;
         height: 90px;
     }
 </style>
@@ -178,17 +181,18 @@ $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 echo "<tr>";
-                echo "<form method='post' action=''>";
                 echo '<td>
                 <form method="get" action="image.php">
                     <input type="hidden" name="id" value="' . $row["id"] . '">
                     <input type="submit" name="view" value="View">
                 </form>
             </td>';
+            echo "<form method='post' action=''>";
+
         echo '<td>
         <input type="hidden" name="id" value="' . $row["id"] . '">
         <input type="submit" name="update" value="Update">
-    </td>';
+             </td>';
     echo '<td>
     <input type="hidden" name="id" value="' . $row["id"] . '">
     <input type="submit" name="delete" value="Delete">

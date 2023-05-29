@@ -99,11 +99,6 @@ include("signup_action.php");
                   </div>
                 </div>
               </div>
-
-              <div class="input_field checkbox_option">
-                <input type="checkbox" id="cb1" />
-                <label for="cb1">I agree with terms and conditions</label>
-              </div>
               <input class="button" type="submit" value="Register" />
             </form>
           </div>

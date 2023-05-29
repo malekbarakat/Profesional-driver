@@ -23,7 +23,7 @@ if (isset($_POST["update"])) {
         $stmt->bindParam(":id", $id);
         $stmt->execute();
        echo "<script>
-        alert('Record updated successfully');
+        alert('تم تعديل الاسم بنجاح');
         window.location.href = 'home.php';
     </script>";
     } catch (PDOException $e) {

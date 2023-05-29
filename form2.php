@@ -32,6 +32,7 @@ if(!isset($_SESSION['email'])) {
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             color: #fff;
+            position: relative;
         }
 
         h1 {
@@ -132,6 +133,11 @@ if(!isset($_SESSION['email'])) {
   right: 15px;
   bottom: 17px;
 }
+.AGREE {
+    position: absolute;
+    left: 25px;
+    bottom: 60px;
+}
        
     </style>
 </head>
@@ -149,16 +155,16 @@ if(!isset($_SESSION['email'])) {
             <input type="text" name="name" required>
 
             <label>العمر</label>
-            <input type="number" name="age" required max="100">
+            <input type="number" name="age" required max="100" min="18">
 
             <label>الرقم الوطني</label>
-            <input type="number" name="id_number" required>
+            <input type="text" pattern="[0-9]{10}" name="id_number" required>
 
             <label>البريد</label>
             <input type="email" name="email" required>
 
             <label>رقم الهاتف </label>
-            <input type="tel" name="phone" required>
+            <input type="tel" pattern="[0-9]{10}" name="phone" required>
 
             <label>ملاحظات:</label>
             <textarea name="description"></textarea>
@@ -186,9 +192,13 @@ if(!isset($_SESSION['email'])) {
             <label >  الصورة الشخصية</label><br>
             <input type="file" name="image3"><br>
             </div>
-
+            <label class="AGREE">
+            <input type="checkbox"required/>    
+            <span class="caption" >أوافق على الشروط والاحكام</span>
+                    </label>
             <input type="submit" value="ارسال الطلب">
         </form>
+
 
         <?php
         // Connect to the MySQL database
@@ -253,7 +263,10 @@ if(!isset($_SESSION['email'])) {
                             VALUES ('$name', '$age', '$id_number', '$description', '$case_status', '$exam_type', '$escaped_file1', '$escaped_file2', '$escaped_file3', '$email', '$phone')";
                     if ($conn->query($sql) === TRUE) {
                         // Request submitted successfully
-                        $message = "تم تقديم طلبك بنجاح";
+                        echo "<script>
+                        alert('تم تقديم طلبك بنجاح');
+                        window.location.href = 'home.php';
+                        </script>";
                     } else {
                         // Error inserting request into database
                         $message = "هنالك خطأ في البيانات";
