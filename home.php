@@ -603,7 +603,7 @@ include("contact_us_form.php");
                 </div>
                 
                 <div class="text-center">
-                  <button class="meow" type="submit" value="Send">Send Message</button>
+                  <button  type="submit" value="Send">Send Message</button>
                 </div>
               </form>
             </div>
