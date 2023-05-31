@@ -1072,5 +1072,11 @@ footer {
 }
 
 .meow {
-  background-color: yellow;
+  background-color: #eb5d1e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 50px;
+  width: 200px;
+  height: 50px;
 }
