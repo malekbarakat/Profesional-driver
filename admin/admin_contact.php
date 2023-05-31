@@ -1,10 +1,10 @@
 <?php    	
 session_start(); // Start the session
 
-if(!isset($_SESSION['email'])) {
-    header('Location: admin_index.php');
-    exit();
-}
+// if(!isset($_SESSION['email'])) {
+//     header('Location: admin_index.php');
+//     exit();
+// }
  ?>
 <?php
 // Connect to database
@@ -77,8 +77,35 @@ th {
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+.circle {
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+}
+.circle i {
+  font-size: 40px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
 </style>
 
+<body>
+<link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
+<div class="circle">
+      <a href="admin_home.php" style="color: #fff">
+      <i class='bx bx-arrow-back'></i>
+      </a>
+    </div>
+</body>
 
 

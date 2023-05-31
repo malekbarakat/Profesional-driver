@@ -1,10 +1,10 @@
 <?php    	
 session_start(); // Start the session
 
-if(!isset($_SESSION['email'])) {
-    header('Location: admin_index.php');
-    exit();
-}
+// if(!isset($_SESSION['email'])) {
+//     header('Location: admin_index.php');
+//     exit();
+// }
  ?>
 <?php
 
@@ -46,7 +46,9 @@ if ($result->num_rows > 0) {
             background-color: #4CAF50;
             color: white;
           }
+          
         </style></head><body>";
+
   echo "<h1>الطلبات الموافق عليها </h1>";
   echo "<table><tr><th>حالة الطلب </th><th>الملاحظات</th><th>رقم الهاتف</th><th>البريد الالكتروني </th><th>الرقم الوطني</th><th>العمر</th><th>الاسم </th><th>ID</th></tr>";
 
@@ -61,3 +63,34 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
+
+<body>
+<link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+  <style>
+.circle {
+            width: 70px;
+            height: 70px;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+          }
+          .circle i {
+            font-size: 40px;
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+          }
+  </style>
+<div class='circle'>
+        <a href='admin_home.php' style='color: #fff'>
+        <i class='bx bx-arrow-back'></i>
+        </a>
+        </div>
+</body>

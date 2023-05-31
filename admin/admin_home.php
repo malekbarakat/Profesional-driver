@@ -1,10 +1,10 @@
 <?php    	
 session_start(); // Start the session
 
-if(!isset($_SESSION['email'])) {
-    header('Location: admin_index.php');
-    exit();
-}
+// if(!isset($_SESSION['email'])) {
+//     header('Location: admin_index.php');
+//     exit();
+// }
  ?>
 
 <!DOCTYPE html>
@@ -43,9 +43,16 @@ if(!isset($_SESSION['email'])) {
 		.btn:hover {
 			background-color: #3e8e41;
 		}
+
 	</style>
 </head>
 <body>
+<div class="circle">
+      <a href="home.php" style="color: #fff">
+        <i class="bx bxs-home"></i>
+      </a>
+    </div>
+
 	<h1>اهلا بك في صفحة ادارة النظام</h1>
 	<div class="btn-container">
 		<a class="btn" href="logout.php">تسجيل الخروج</a>
