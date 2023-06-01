@@ -63,6 +63,7 @@ try {
         h1 {
             margin: 0;
             padding: 20px;
+            padding-top: 40px;
             background-color: #fef8f5;
             color: #eb5d1e;
             text-align: center;
@@ -71,12 +72,12 @@ try {
         table {
             border-collapse: collapse;
             width: 100%;
-            margin-top: 20px;
+            margin-top: 5px;
         }
 
         th,
         td {
-            text-align: right;
+            
             padding: 8px;
             border: 4px solid white;
             border-radius: 10px;
@@ -85,6 +86,8 @@ try {
         th {
             background-color: #eb5d1e;
             color: #fff;
+            font-size: 18px;
+            text-align: right;
         }
 
         tr:nth-child(even) {
@@ -103,11 +106,12 @@ try {
             border: 2px solid #ccc;
             border-radius: 4px;
             text-align: right;
+            font-size: 15px;
         }
 
         input[type=submit] {
             background-color: #eb5d1e;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: bold;
             color: white;
             padding: 14px 20px;
@@ -115,8 +119,10 @@ try {
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            float: right;
             transition: 0.3s;
+            width: 80%;
+            float: right;
+            margin-right: 15px;
         }
 
         input[type=submit]:hover {

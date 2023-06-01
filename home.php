@@ -127,7 +127,7 @@ include("contact_us_form.php");
           >
             <h1>مرحبًا بكم في موقع تدريب القيادة</h1>
             <h2>حيث نهدف إلى تعليم القيادة بطريقة آمنة ومسؤولة</h2>
-            <div><h2>  <?php echo" " . $user['firstname'];echo" " . $user['lastname']." "; ?> مرحبا</h2></div>
+            <div><h2>اهلا وسهلا <span style="font-weight: bold"> <?php echo" " . $user['firstname'];echo" " . $user['lastname']." "; ?> </span></h2></div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img">
             <img
@@ -204,7 +204,7 @@ include("contact_us_form.php");
             >
               <div class="icon-box">
                 <div class="icon"><i class="bx bxs-videos"></i></div>
-                <h4 class="title"><a href="">المادة العملية</a></h4>
+                <h4 class="title"><a href="videos.html">المادة العملية</a></h4>
                 <p class="description">
                   يحتوي هذا القسم على المهارات المتعلقة بالقيادة، مثل الانعطافات
                   وتفادي الأخطاء الشائعة
@@ -219,7 +219,7 @@ include("contact_us_form.php");
             >
               <div class="icon-box">
                 <div class="icon"><i class="bx bxs-traffic"></i></div>
-                <h4 class="title"><a href="">المادة النظرية</a></h4>
+                <h4 class="title"><a href="المادة النظرية.html">المادة النظرية</a></h4>
                 <p class="description">
                   يحتوي هذا القسم على قواعد ولوائح السير والمرور والتشريعات
                   المرورية المختلفة
@@ -248,7 +248,7 @@ include("contact_us_form.php");
             >
               <div class="icon-box">
                 <div class="icon"><i class="bx bx-id-card"></i></div>
-                <h4 class="title"><a href="">ارشادات إصدار الرخصة</a></h4>
+                <h4 class="title"><a href="page_1.html">ارشادات إصدار الرخصة</a></h4>
                 <p class="description">
                   يحتوي هذا القسم على الارشادات الواجب اتباعها لإصدار رخصة
                   القيادة
@@ -546,6 +546,7 @@ include("contact_us_form.php");
                 action="contact_us_form.php"
                 method="post"
                 role="form"
+                style="margin-left: 130px; margin-top: 30px"
               >
                 <div class="row">
                   <div class="form-group col-md-6">

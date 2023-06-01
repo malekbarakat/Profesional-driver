@@ -119,15 +119,15 @@ if(!isset($_SESSION['email'])) {
             height: 30px;
         }
         .circle {
-  width: 70px;
-  height: 70px;
-  color: #fff;
-  background-color: #eb5d1e;
-  border-radius: 50%;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-}
+            width: 70px;
+            height: 70px;
+            color: #fff;
+            background-color: #eb5d1e;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+        }
 .circle i {
   font-size: 40px;
   position: absolute;
@@ -137,7 +137,7 @@ if(!isset($_SESSION['email'])) {
 .AGREE {
     position: absolute;
     left: 25px;
-    bottom: 60px;
+    top: 940px;
 }
         select {
             cursor: pointer;

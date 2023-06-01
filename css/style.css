@@ -23,15 +23,30 @@ h6,
   font-family: "Roboto", sans-serif;
 }
 
+h3 {
+  font-size: 32px;
+}
+
+.mb-4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+h3,
+.mb-4,
+.form-control {
+  text-align: right;
+}
+
 a.sign_up:visited {
   position: absolute;
   right: 15px;
-  color: rgb(61, 61, 184);
 }
 a.sign_up:link {
   position: absolute;
   right: 15px;
-  color: rgb(61, 61, 184);
+  font-size: 17px;
+  font-weight: bold;
 }
 
 a {
@@ -45,10 +60,10 @@ a:hover {
 
 .all {
   background-color: #ffffff;
-  border-top: 5px solid #847dff;
+  border-top: 5px solid #eb5d1e;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin-top: -40px;
   padding-top: 30px;
   padding-bottom: 25px;
@@ -95,10 +110,10 @@ h2 {
 
 .form-group input[type="text"]:focus,
 .form-group input[type="password"]:focus {
-  -webkit-box-shadow: 0 0 2px 1px #1303c180;
-  -moz-box-shadow: 0 0 2px 1px #1303c180;
-  box-shadow: 0 0 2px 1px #1303c180;
-  border: 1px solid #6c63ff;
+  -webkit-box-shadow: 0 0 2px 1px #ef7f4d;
+  -moz-box-shadow: 0 0 2px 1px #ef7f4d;
+  box-shadow: 0 0 2px 1px #ef7f4d;
+  border: 1px solid #eb5d1e;
   background: #fafafa;
 }
 
@@ -126,12 +141,18 @@ h2 {
   height: 54px;
   padding-left: 30px;
   padding-right: 30px;
+  background-color: #eb5d1e;
+  border: none;
+}
+.btn:hover {
+  background-color: #ef7f4d;
 }
 
 .content .forgot-pass {
   position: relative;
   top: 2px;
-  font-size: 14px;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 .social-login a {
@@ -188,6 +209,9 @@ h2 {
   position: relative;
   top: 0.2rem;
   color: #888;
+  font-size: 16px;
+  right: 25px;
+  font-weight: bold;
 }
 
 .control input {
@@ -199,7 +223,7 @@ h2 {
 .control__indicator {
   position: absolute;
   top: 2px;
-  left: 0;
+  right: 0;
   height: 20px;
   width: 20px;
   background: #e6e6e6;
@@ -216,12 +240,12 @@ h2 {
 }
 
 .control input:checked ~ .control__indicator {
-  background: #6c63ff;
+  background: #eb5d1e;
 }
 
 .control:hover input:not([disabled]):checked ~ .control__indicator,
 .control input:checked:focus ~ .control__indicator {
-  background: #847dff;
+  background: #ef7f4d;
 }
 
 .control input:disabled ~ .control__indicator {

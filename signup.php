@@ -26,7 +26,7 @@ include("signup_action.php");
     <div class="form_wrapper">
       <div class="form_container">
         <div class="title_container">
-          <h2>Create New Account</h2>
+          <h2>إنشاء حساب جديد</h2>
 
         </div>
         <div class="row clearfix">
@@ -34,7 +34,7 @@ include("signup_action.php");
             <form aciton="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
               <div class="input_field">
                 <!-- <span><i aria-hidden="true" class="fa fa-envelope"></i></span> -->
-                <input type="email" name="email"value="<?php echo $email;?>" placeholder="Email" required />
+                <input type="email" name="email"value="<?php echo $email;?>" placeholder="البريد الالكتروني" required />
                 <span class="error"><i aria-hidden="true" class="fa fa-envelope"></i><?php if (!empty($emailErr)) {
                   echo '<script>showError("' . $emailErr . '");</script>';
                   }?></span>
@@ -48,7 +48,7 @@ include("signup_action.php");
                 <input
                   type="password"
                   name="password"
-                  placeholder="Password"
+                  placeholder="كلمة المرور"
                   required
                   minlength="8"
                   maxlength="32"
@@ -76,7 +76,7 @@ include("signup_action.php");
                     <input
                       type="text"
                       name="firstname"
-                      placeholder="First Name"
+                      placeholder="الاسم الاول"
                       value="<?php echo $firstName;?>"
                       required
                     />
@@ -92,14 +92,14 @@ include("signup_action.php");
                     <input
                       type="text"
                       name="lastname"
-                      placeholder="Last Name"
+                      placeholder="الاسم الاخير"
                       value="<?php echo $lastName;?>"
                       required
                     />
                   </div>
                 </div>
               </div>
-              <input class="button" type="submit" value="Register" />
+              <input class="button" type="submit" value="تسجيل" />
             </form>
           </div>
         </div>

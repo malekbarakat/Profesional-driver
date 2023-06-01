@@ -50,9 +50,9 @@
             <div class="row justify-content-center">
               <div class="col-md-8">
                 <div class="mb-4">
-                  <h3 class="si">Log In</h3>
+                  <h3 class="si">تسجيل الدخول</h3>
                   <p class="mb-4">
-                    Type your email and password or create new account
+                  ادخل بريدك الإلكتروني وكلمة المرور أو أنشئ حسابًا جديدًا
                   </p>
                 </div>
                 <form action="login.php" method="POST">
@@ -62,7 +62,7 @@
                       name="email"
                       class="form-control"
                       id="email"
-                      placeholder="email"
+                      placeholder="البريد الإلكتروني"
                       required
                     />
                   </div>
@@ -73,7 +73,7 @@
 
                       class="form-control"
                       id="password"
-                      placeholder="Password"
+                      placeholder="كلمة المرور"
                       minlength="8"
                       maxlength="32"
                       required
@@ -82,12 +82,12 @@
 
                   <div class="d-flex mb-5 align-items-center">
                     <label class="control control--checkbox mb-0"
-                      ><span class="caption">Remember me</span>
+                      ><span class="caption">تذكرني</span>
                       <input type="checkbox" checked="checked" />
                       <div class="control__indicator"></div>
                     </label>
                     <span class="ml-auto"
-                      ><a href="#" class="forgot-pass">Forgot Password</a></span
+                      ><a href="#" class="forgot-pass">نسيت كلمة المرور</a></span
                     >
                   </div>
                   <span >
@@ -100,13 +100,13 @@
 
                   <input
                     type="submit"
-                    value="Log In"
+                    value="تسجيل الدخول"
                     class="btn btn-block btn-primary"
                   />
 
-                  <span class="d-block text-left my-4 text-muted"
-                    >or login with
-                    <a href="signup.php" class="sign_up">Create account</a>
+                  <span class="d-block text-left my-4 text-muted" style="font-weight: bold"
+                    >:تسجيل الدخول عبر
+                    <a href="signup.php" class="sign_up" style="color: black">إنشاء حساب </a>
                   </span>
 
                   <div class="social-login">
@@ -121,7 +121,7 @@
                     </a>
                   </div>
                 </form>
-                    <a href="admin/admin_index.php"class="sign_up">Admin</a><br>
+                    <a href="admin/admin_index.php"class="sign_up" style="font-weight:500">Admin</a><br>
 
               </div>
             </div>
