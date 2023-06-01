@@ -28,11 +28,10 @@ if(!isset($_SESSION['email'])) {
             max-width: 400px;
             margin: 30px auto;
             padding: 20px;
-            background-color: #eb5d1e;
-            border: 1px solid #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            color: #fff;
+            background-color: #fef8f5;
+            border-top: 5px solid #eb5d1e;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            color: black;
             position: relative;
         }
 
@@ -54,8 +53,7 @@ if(!isset($_SESSION['email'])) {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
-            border: 1px solid #fff;
-            border-radius: 4px;
+            border: 1px solid #cccccc;
             box-sizing: border-box;
             margin-top: 6px;
         }
@@ -74,7 +72,7 @@ if(!isset($_SESSION['email'])) {
         form input[type="submit"] {
             background-color: #fff;
             color: #eb5d1e;
-            border: none;
+            border: 1px solid #eb5d1e;
             padding: 10px 20px;
             cursor: pointer;
             font-size: 16px;
@@ -85,7 +83,7 @@ if(!isset($_SESSION['email'])) {
         }
 
         form input[type="submit"]:hover {
-            background-color: #FF9933;
+            background-color: #eb5d1e;
             color: #fff;
             transition: 0.3s;
         }
@@ -128,21 +126,30 @@ if(!isset($_SESSION['email'])) {
             bottom: 30px;
             right: 30px;
         }
-.circle i {
-  font-size: 40px;
-  position: absolute;
-  right: 15px;
-  bottom: 17px;
-}
-.AGREE {
-    position: absolute;
-    left: 25px;
-    top: 940px;
-}
+        .circle i {
+            font-size: 40px;
+            position: absolute;
+            right: 15px;
+            bottom: 17px;
+        }
+        .AGREE {
+            position: absolute;
+            left: 25px;
+            top: 940px;
+        }
         select {
             cursor: pointer;
         }
-       
+
+        .CH {
+            cursor: pointer;
+            width: 20px;
+        }
+        .caption {
+            cursor: pointer;
+
+        }
+
     </style>
 </head>
 <body>
@@ -170,13 +177,13 @@ if(!isset($_SESSION['email'])) {
             <label>رقم الهاتف </label>
             <input type="tel" pattern="[0-9]{10}" name="phone" required>
 
-            <label>ملاحظات:</label>
+            <label>ملاحظات</label>
             <textarea name="description"></textarea>
 
             <br>
-            <label>نوع الامتحان:</label>
+            <label>نوع الامتحان</label>
             <br>
-            <select class="p1" name="exam_type" required>
+            <select class="p1" name="exam_type" required style="border: 1px solid #cccccc">
             <option value="">اختر نوع الامتحان</option>
             <option value="الامتحان العملي">الامتحان العملي</option>
             <option value="امتحان نظري">امتحان نظري</option>
@@ -185,7 +192,6 @@ if(!isset($_SESSION['email'])) {
 
             <label>حالة الطلب</label>
             <input class="bg" type="text" name="case_status" value="Pending" disabled>
-
 
             <div class="p1">
             <label>الوجه الامامي للهوية</label><br>
@@ -200,9 +206,9 @@ if(!isset($_SESSION['email'])) {
             <input type="file" name="image3"><br>
             </div>
             <label class="AGREE">
-            <input type="checkbox"required/>    
-            <span class="caption" >أوافق على الشروط والاحكام</span>
-                    </label>
+            <input class="CH" type="checkbox" required/>    
+                <span class="caption" >أوافق على الشروط والاحكام</span>
+            </label>
             <input type="submit" value="ارسال الطلب">
         </form>
 
