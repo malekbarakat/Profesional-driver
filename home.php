@@ -104,7 +104,7 @@ include("contact_us_form.php");
                 <li><a href="page_1.html">ارشادات اصدار الرخصة</a></li>
               </ul>
             </li>
-            <li><a class="nav-link scrollto" href="settings.php">الاعدادات</a></li>
+            <li><a class="nav-link scrollto" href="settings.php">الاعدادات الشخصية</a></li>
             <li>
               <a class="getstarted scrollto" href="logout.php"
                 >تسجيل الخروج</a

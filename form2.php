@@ -21,11 +21,12 @@ if(!isset($_SESSION['email'])) {
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-color: #fef8f5;
         }
 
         .container {
             max-width: 400px;
-            margin: 0 auto;
+            margin: 30px auto;
             padding: 20px;
             background-color: #eb5d1e;
             border: 1px solid #fff;
@@ -138,6 +139,9 @@ if(!isset($_SESSION['email'])) {
     left: 25px;
     bottom: 60px;
 }
+        select {
+            cursor: pointer;
+        }
        
     </style>
 </head>
@@ -169,12 +173,15 @@ if(!isset($_SESSION['email'])) {
             <label>ملاحظات:</label>
             <textarea name="description"></textarea>
 
-            <br> <label>نوع الامتحان:</label><br>
-             <select class="p1" name="exam_type" required>
-             <option value="">اختر نوع الامتحان</option>
+            <br>
+            <label>نوع الامتحان:</label>
+            <br>
+            <select class="p1" name="exam_type" required>
+            <option value="">اختر نوع الامتحان</option>
             <option value="الامتحان العملي">الامتحان العملي</option>
-          <option value="امتحان نظري">امتحان نظري</option>
-            </select><br>
+            <option value="امتحان نظري">امتحان نظري</option>
+            </select>
+            <br>
 
             <label>حالة الطلب</label>
             <input class="bg" type="text" name="case_status" value="Pending" disabled>

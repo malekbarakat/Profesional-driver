@@ -46,20 +46,25 @@ try {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Edit your information</title>
+<link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>الاعدادات الشخصية</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             font-size: 14px;
             margin: 0;
             padding: 0;
+            background-color: #fef8f5;
         }
 
         h1 {
             margin: 0;
             padding: 20px;
-            background-color: #2196F3;
-            color: #fff;
+            background-color: #fef8f5;
+            color: #eb5d1e;
             text-align: center;
         }
 
@@ -71,12 +76,14 @@ try {
 
         th,
         td {
-            text-align: left;
+            text-align: right;
             padding: 8px;
+            border: 4px solid white;
+            border-radius: 10px;
         }
 
         th {
-            background-color: #2196F3;
+            background-color: #eb5d1e;
             color: #fff;
         }
 
@@ -95,10 +102,13 @@ try {
             box-sizing: border-box;
             border: 2px solid #ccc;
             border-radius: 4px;
+            text-align: right;
         }
 
         input[type=submit] {
-            background-color: #4CAF50;
+            background-color: #eb5d1e;
+            font-size: 13px;
+            font-weight: bold;
             color: white;
             padding: 14px 20px;
             margin: 8px 0;
@@ -106,29 +116,53 @@ try {
             border-radius: 4px;
             cursor: pointer;
             float: right;
+            transition: 0.3s;
         }
 
         input[type=submit]:hover {
-            background-color: #45a049;
+            background-color: #ef7f4d;
+            transition: 0.3s;
         }
 
         .container {
             padding: 20px;
         }
+        .circle {
+            width: 70px;
+            height: 70px;
+            color: #fff;
+            background-color: #eb5d1e;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+        }
+.circle i {
+  font-size: 40px;
+  position: absolute;
+  right: 15px;
+  bottom: 17px;
+}
+
     </style>
 </head>
 <body>
-    <h1>الاعدادات</h1>
+<div class="circle">
+      <a href="home.php" style="color: #fff">
+        <i class="bx bxs-home"></i>
+      </a>
+    </div>
+    <h1>الاعدادات الشخصية</h1>
 
     <div class="container">
         <!-- Display records in a table -->
         <table>
             <thead>
                 <tr>
+                    <th>تحديث البيانات</th>
                     <th>البريد الالكتروني</th>
-                    <th> الاسم الاول</th>
                     <th> الاسم الاخير</th>
-                    <th>تحديث</th>
+                    <th> الاسم الاول</th>
                 </tr>
             </thead>
             <tbody>
@@ -139,13 +173,14 @@ try {
                         ?>
                         <tr>
                             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                                <td><input type="text" name="email" value="<?php echo $user["email"]; ?>" readonly></td>
-                                <td><input type="text" name="firstName" value="<?php echo $user["firstname"]; ?>"></td>
-                                <td><input type="text" name="lastName" value="<?php echo $user["lastname"]; ?>"></td>
                                 <td>
                                     <input type="hidden" name="id" value="<?php echo $user["id"]; ?>">
                                     <input type="submit" name="update" value="تحديث" class="btn-update">
                                 </td>
+                                <td><input type="text" name="email" value="<?php echo $user["email"]; ?>" readonly></td>
+                                <td><input type="text" name="lastName" value="<?php echo $user["lastname"]; ?>"></td>
+                                <td><input type="text" name="firstName" value="<?php echo $user["firstname"]; ?>"></td>
+                                
                             </form>
                         </tr>
                         <?php
